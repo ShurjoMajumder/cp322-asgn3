@@ -13,6 +13,22 @@ classoption:
 
 > Completed By: Shurjo Majumder
 
+### Introduction
+
+In this part, an ANN was trained to classify hand written digits using the MNIST dataset.
+
+### Performance Summary
+
+Validation scores:
+
+Confusion matrix of best model:
+
+### Adjusting Hyperparameters
+
+Increasing batch size decreased time to converge. Increasing learning rate lowered accuracy. The best hidden layer count was (64, 64), as more led to overfit, while fewer led to underfit.
+
+### Conclusion
+
 ## Part 2: Naïve Bayes Classifier
 
 > Completed By: Robin Chen
