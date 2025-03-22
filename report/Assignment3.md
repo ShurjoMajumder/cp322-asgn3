@@ -19,15 +19,24 @@ In this part, an ANN was trained to classify hand written digits using the MNIST
 
 ### Performance Summary
 
-Validation scores:
+Lower learning rates during training tended to perform better, declining rapidly after $\lambda = 10^{-2}$.
 
-Confusion matrix of best model:
+
+This was a model with hidden units (64, 64), and batches set to be automatically sized, $\lambda = 10^{-3}$. 
+
+![Validation Accuracy to Learning Rate](../assets/validation.png)
+
+![Confusion Matrix](../assets/confusion_matrix.png)
 
 ### Adjusting Hyperparameters
 
-Increasing batch size decreased time to converge. Increasing learning rate lowered accuracy. The best hidden layer count was (64, 64), as more led to overfit, while fewer led to underfit.
+Increasing batch size decreased time to converge. The best batch size was determined by simply setting the batch size in the model to "auto". Increasing learning rate lowered accuracy. The best hidden layer count was (64, 64), as more led to overfit, while fewer led to underfit.
+
+In this case chose the best batch size and hidden layer hyperparameters by praying to Saraswati that the values I choose are the best ones, then pick arbitrary values after multiple training cycles. If I had unlimited computational resources, I'd run a more exhaustive grid search across many different batch sizes/learning rates/hidden unit counts and find which is truly optimal.
 
 ### Conclusion
+
+In conclusion, the model displayed an overall accuracy of 96% over the test set. The confusion matrix shows that the likelihood of mis-classification is fairly low, and the model is remarkably accurate in identifying the "1" glyph.
 
 ## Part 2: Naïve Bayes Classifier
 
